@@ -16,11 +16,11 @@ module.exports = {
     let commands = message.client.commands.array();
  
     let helpEmbed = new MessageEmbed()
-      .setTitle("Harmony Help")
-      .setAuthor('Click here to invite me!!', 'https://cdn.discordapp.com/attachments/778600026280558617/781024479623118878/ezgif.com-gif-maker_1.gif', 'https://discord.com/api/oauth2/authorize?client_id=767885987740254291&permissions=49572160&scope=bot')
+      .setTitle("A friendly help from your best friend-Joseph Stalin!")
+      .setAuthor('')
       .setDescription(`**PREFIX:** \`${PREFIX}\``)
-      .setFooter( client.user.username +`Type: ${PREFIX}help <Command>  for more information!`, "https://cdn.discordapp.com/attachments/778600026280558617/781024479623118878/ezgif.com-gif-maker_1.gif")
-      .setColor("#F0EAD6");
+      .setFooter( client.user.username +`Type: ${PREFIX}help <Command>  for more information!`)
+      .setColor("#FF0000");
 
       let ifargstruedothis = -1;
       
