@@ -33,8 +33,8 @@ execute(message) {
       //resume the Bot
       queue.connection.dispatcher.resume();
       //Create approve embed
-      const playembed = new MessageEmbed().setColor("#F0EAD6")
-      .setAuthor(`${message.author.username} resumed the music!`, "https://media.giphy.com/media/kiho1zyvAmGiKBjIAs/giphy.gif")
+      const playembed = new MessageEmbed().setColor("#FF0000")
+      .setAuthor(`Resume the music! Now!`, "https://steamuserimages-a.akamaihd.net/ugc/930426796060400522/05E28E07F136266CD687DFC1A52CC3D5914797DD/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false")
       //send the approve
       return queue.textChannel.send(playembed).catch(console.error);
     }
