@@ -23,7 +23,7 @@ execute(message,args,client) {
     //get the Queue
     const queue = message.client.queue.get(message.guild.id);
     //if no queue return error
-    if (!queue) return attentionembed(message, "There is no Queue.");
+    if (!queue) return attentionembed(message, "There is no Queue my comrade.");
     //if not in the same channel as the bot
     if (!canModifyQueue(message.member)) return;
     //get all queue songs
@@ -39,7 +39,7 @@ execute(message,args,client) {
     message.client.queue.set(message.guild.id, queue);
     //send the Approve message
     queue.textChannel.send(new MessageEmbed()
-    .setDescription(`**:notes: | ${message.author} shuffled the Queue**`)
-    .setColor("#F0EAD6")).catch(console.error);
+    .setDescription(` Shuffled the Queue`)
+    .setColor("#FF0000")).catch(console.error);
   }
 };
