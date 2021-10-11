@@ -40,15 +40,15 @@ async execute(message,args,client) {
     const search = args.join(" ");
     //define a temporary Loading Embed
     let temEmbed = new MessageEmbed()
-    .setAuthor("Searching...", "https://cdn.discordapp.com/attachments/778600026280558617/781024479623118878/ezgif.com-gif-maker_1.gif")
-    .setColor("#F0EAD6")
+    .setAuthor("Searching...", "https://steamuserimages-a.akamaihd.net/ugc/930426796060400522/05E28E07F136266CD687DFC1A52CC3D5914797DD/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false")
+    .setColor("#FF0000")
     //define the Result Embed
     let resultsEmbed = new MessageEmbed()
       .setTitle("Results for ")
       .setDescription(`\`${search}\``)
-      .setColor("#F0EAD6")
-      .setAuthor("Search results!!", "https://cdn.discordapp.com/attachments/778600026280558617/781024479623118878/ezgif.com-gif-maker_1.gif","http://harmonymusic.tk")
-      .setFooter("Response with your favorite number","https://cdn.discordapp.com/attachments/778600026280558617/781024479623118878/ezgif.com-gif-maker_1.gif")
+      .setColor("#FF0000")
+      .setAuthor("Search results!!", "https://steamuserimages-a.akamaihd.net/ugc/930426796060400522/05E28E07F136266CD687DFC1A52CC3D5914797DD/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false")
+      .setFooter("Response with your favorite number","https://steamuserimages-a.akamaihd.net/ugc/930426796060400522/05E28E07F136266CD687DFC1A52CC3D5914797DD/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false")
     //try to find top 5 results
     try {
       //find them
