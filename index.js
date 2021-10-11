@@ -3,7 +3,7 @@ const { Client, Collection, MessageEmbed,MessageAttachment } = require(`discord.
 const { readdirSync } = require(`fs`);
 const { join } = require(`path`);
 const db = require('quick.db');
-const { keep_alive } = require("./keep_alive");
+const keepalive = require("./keep_alive");
 const { TOKEN, PREFIX, AVATARURL, BOTNAME, } = require(`./config.json`);
 const figlet = require("figlet");
 const client = new Client({ disableMentions: `` , partials: ['MESSAGE', 'CHANNEL', 'REACTION'] });
@@ -36,7 +36,7 @@ client.on(`ready`, () => {
       
 
       client.user.setActivity(`${PREFIX}help | ${client.guilds.cache.size} Server`, { type: "STREAMING",
-      url: "https://www.twitch.tv/nocopyrightsounds"});
+      url: "https://www.youtube.com/watch?v=NZbdYXBp_o8"});
    
   
       }, (5000));
@@ -81,7 +81,7 @@ client.on(`message`, async (message) => {
 
   //information message when the bot has been tagged
   if(message.content.includes(client.user.id)) {
-    message.reply(new Discord.MessageEmbed().setColor("#F0EAD6").setAuthor(`${message.author.username}, My Prefix is ${prefix}, to get started; type ${prefix}help`, message.author.displayAvatarURL({dynamic:true})));
+    message.reply(new Discord.MessageEmbed().setColor("#FF0000").setAuthor(`${message.author.username}, My Prefix is ${prefix}, to get started; type ${prefix}help`, message.author.displayAvatarURL({dynamic:true})));
   } 
   //An embed announcement for everyone but no one knows so fine ^w^
   if(message.content.startsWith(`${prefix}embed`)){
@@ -89,16 +89,14 @@ client.on(`message`, async (message) => {
     const saymsg = message.content.slice(Number(prefix.length) + 5)
     //define embed
     const embed = new Discord.MessageEmbed()
-    .setColor("#F0EAD6")
+    .setColor("#FF0000")
     .setDescription(saymsg)
-    .setFooter("Harmony", client.user.displayAvatarURL())
+    .setFooter("STALIN", client.user.displayAvatarURL())
     //delete the Command
     message.delete({timeout: 300})
     //send the Message
     message.channel.send(embed)
   }
-
-
 //command Handler DO NOT TOUCH
  const prefixRegex = new RegExp(`^(<@!?${client.user.id}>|${escapeRegex(prefix)})\\s*`);
  if (!prefixRegex.test(message.content)) return;
@@ -120,7 +118,7 @@ client.on(`message`, async (message) => {
    if (now < expirationTime) {
      const timeLeft = (expirationTime - now) / 1000;
      return message.reply(
-      new MessageEmbed().setColor("#F0EAD6")
+      new MessageEmbed().setColor("#FF0000")
       .setTitle(`:x: Please wait \`${timeLeft.toFixed(1)} seconds\` before reusing the \`${prefix}${command.name}\`!`)    
      );
    }
@@ -131,7 +129,7 @@ client.on(`message`, async (message) => {
    command.execute(message, args, client);
  } catch (error) {
    console.error(error);
-   message.reply( new MessageEmbed().setColor("#F0EAD6")
+   message.reply( new MessageEmbed().setColor("#FF0000")
    .setTitle(`:x: There was an error executing that command.`)).catch(console.error);
  }
 
