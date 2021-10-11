@@ -16,6 +16,6 @@ module.exports = {
     let songMoved = queue.songs[args[0] - 1];
 
     queue.songs.move(args[0] - 1, 1);
-    queue.textChannel.send(`${message.author} 🚚 moved **${songMoved.title}**.`);
+    queue.textChannel.send(`Moved **${songMoved.title}**.`);
   }
 };
