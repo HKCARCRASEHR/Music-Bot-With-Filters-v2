@@ -29,8 +29,8 @@ module.exports = {
       //pause the music
       queue.connection.dispatcher.pause(true);
       //define the pause embed
-      const pausemebed = new MessageEmbed().setColor("#F0EAD6")
-      .setAuthor(`${message.author.username} paused the music.`, "https://media.giphy.com/media/kiho1zyvAmGiKBjIAs/giphy.gif")
+      const pausemebed = new MessageEmbed().setColor("#FF0000")
+      .setAuthor(`Paused the music.`, "https://steamuserimages-a.akamaihd.net/ugc/930426796060400522/05E28E07F136266CD687DFC1A52CC3D5914797DD/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false")
       //react with approve emoji
       message.react(approveemoji)
       //return message
