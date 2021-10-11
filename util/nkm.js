@@ -9,8 +9,8 @@ module.exports = {
  async canModifyQueue(member) {
     //define the EMBED
     let resultsEmbed = new MessageEmbed()
-      .setTitle("❗️ | You must be in the Same Voice Channel as of Harmony!")
-      .setColor("#F0EAD6")
+      .setTitle("❗️ | You must be in the Same Voice Channel !")
+      .setColor("#FF0000")
     //wenn memberchannel nicht der botchannel ist
     if (member.voice.channel !== member.guild.me.voice.channel) {
     //Send the message to the MEMBER
