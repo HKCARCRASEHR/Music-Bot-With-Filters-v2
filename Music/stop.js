@@ -27,7 +27,7 @@ async execute(message,args,client) {
   if (!channel) return attentionembed(message, "Please join a Voice Channel first");  
   //If not in the same channel return error
   if (queue && channel !== message.guild.me.voice.channel)
-  return attentionembed(message, `You must be in the same Voice Channel as me`);
+  return attentionembed(message, `You must be in the same Voice Channel as me-Stalin!`);
   //if no Queue return error
   if (!queue)
     return attentionembed(message, "There is nothing you can stop!");
@@ -37,8 +37,8 @@ async execute(message,args,client) {
   await channel.leave();
   //send the approve message    
   message.channel.send(new MessageEmbed()
-  .setColor("#F0EAD6")
-  .setAuthor(`${message.author.username} stopped the music!`, "https://cdn.discordapp.com/attachments/778600026280558617/781024479623118878/ezgif.com-gif-maker_1.gif"))
+  .setColor("#FF0000")
+  .setAuthor(`Stop the music!`, "https://steamuserimages-a.akamaihd.net/ugc/930426796060400522/05E28E07F136266CD687DFC1A52CC3D5914797DD/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false"))
   .catch(console.error);
   }
 };
