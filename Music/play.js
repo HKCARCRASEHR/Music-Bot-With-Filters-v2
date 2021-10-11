@@ -71,29 +71,29 @@ async execute(message, args, client) {
       if (serverQueue) {
         //if its an url
         if (urlValid) { //send searching link
-          message.channel.send(new MessageEmbed().setColor("#F0EAD6")
+          message.channel.send(new MessageEmbed().setColor("#FF0000")
             .setDescription(`**:notes: Searching 🔍 [\`LINK\`](${args.join(" ")})**`))
         //if not
         }
         else { //send searching TITLE
-          message.channel.send(new MessageEmbed().setColor("#F0EAD6")
+          message.channel.send(new MessageEmbed().setColor("#FF0000")
             .setDescription(`**:notes: Searching 🔍 \`${args.join(" ")}\`**`))
         }
       } else {
         //If nothing is playing join the channel
         queueConstruct.connection = await channel.join();
         //send join message
-        message.channel.send(new MessageEmbed().setColor("#F0EAD6")
+        message.channel.send(new MessageEmbed().setColor("#FF0000")
           .setDescription(`**👍 Joined \`${channel.name}\` 📄 bound \`#${message.channel.name}\`**`)
           .setFooter(`By: ${message.author.username}#${message.author.discriminator}`))
         //if its an url
         if (urlValid) { //send searching link
-          message.channel.send(new MessageEmbed().setColor("#F0EAD6")
+          message.channel.send(new MessageEmbed().setColor("#FF0000")
             .setDescription(`**:notes: Searching 🔍 [\`LINK\`](${args.join(" ")})**`))
           //if not 
         }
         else { //send searching TITLE
-          message.channel.send(new MessageEmbed().setColor("#F0EAD6")
+          message.channel.send(new MessageEmbed().setColor("#FF0000")
             .setDescription(`**:notes: Searching 🔍 \`${args.join(" ")}\`**`))
         }
         //Set selfdeaf and serverdeaf true
@@ -136,8 +136,8 @@ async execute(message, args, client) {
       }                                                               
     }
     //get the thumbnail
-    let thumb = "https://cdn.discordapp.com/attachments/778600026280558617/781024479623118878/ezgif.com-gif-maker_1.gif"
-    if (song.thumbnail === undefined) thumb = "https://cdn.discordapp.com/attachments/778600026280558617/781024479623118878/ezgif.com-gif-maker_1.gif";
+    let thumb = "https://steamuserimages-a.akamaihd.net/ugc/930426796060400522/05E28E07F136266CD687DFC1A52CC3D5914797DD/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false"
+    if (song.thumbnail === undefined) thumb = "https://steamuserimages-a.akamaihd.net/ugc/930426796060400522/05E28E07F136266CD687DFC1A52CC3D5914797DD/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false";
     else thumb = song.thumbnail.url;
     //if there is a server queue send that message!
     if (serverQueue) {
@@ -164,10 +164,10 @@ async execute(message, args, client) {
       //the new song embed
       const newsong = new MessageEmbed()
         .setTitle(":notes:" + song.title)
-        .setColor("#F0EAD6")
+        .setColor("#FF0000")
         .setThumbnail(thumb)
         .setURL(song.url)
-        .setDescription(`\`\`\`Has been added to the Queue.\`\`\``)
+        .setDescription(`\`\`\`Has been added to the Queue my comrade.\`\`\``)
         .addField("Estimated time until playing:", `\`${estimatedtime}\``, true)
         .addField("Position in queue", `**\`${serverQueue.songs.length - 1}\`**`, true)
         .setFooter(`Requested by: ${message.author.username}#${message.author.discriminator}`, message.member.user.displayAvatarURL({ dynamic: true }))
