@@ -34,8 +34,8 @@ execute(message, args) {
     message.react(approveemoji)
     //send approve
     queue.textChannel.send(new MessageEmbed()
-    .setDescription(`:no_entry_sign: | ${message.author} removed **${song[0].title}** from the Queue`)
-    .setColor("#F0EAD6")
+    .setDescription(`Removed **${song[0].title}** from the Queue`)
+    .setColor("#FF0000")
     );
   }
 };
