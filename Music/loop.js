@@ -27,8 +27,8 @@ execute(message) {
     queue.loop = !queue.loop;
     //Define the Loop embed
     const loopembed = new MessageEmbed()
-    .setColor(queue.loop ? "#F0EAD6" : "#F0EAD6")
-    .setAuthor(`Loop is now ${queue.loop ? " enabled" : " disabled"}`, "https://cdn.discordapp.com/attachments/778600026280558617/781024479623118878/ezgif.com-gif-maker_1.gif")
+    .setColor(queue.loop ? "#FF0000" : "#FF0000")
+    .setAuthor(`Brainwash mode ${queue.loop ? " enabled" : " disabled"}`, "https://steamuserimages-a.akamaihd.net/ugc/930426796060400522/05E28E07F136266CD687DFC1A52CC3D5914797DD/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false")
     //react with approve emoji
     message.react(approveemoji);
     //send message into the Queue chat
